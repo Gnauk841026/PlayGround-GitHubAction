@@ -9,7 +9,7 @@ jobs:
             - name: Clone repository
               run: |
                 git clone https://github.com/Gnauk841026/PlayGround-GitHubAction.git
-                cd playGround-GitHubAction/python-demo-pytest
+                cd PlayGround-GitHubAction/python-demo-pytest
 
             - name: install pytest
               run: pip install pytest
