@@ -1,4 +1,4 @@
-name: pytest-demo
+name: Base-pytest-demo
 on: workflow_dispatch
 
 jobs:
