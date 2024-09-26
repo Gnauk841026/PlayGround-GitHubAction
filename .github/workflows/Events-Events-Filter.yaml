@@ -1,0 +1,15 @@
+#.github/workflows/Events-Events-Filter.yaml
+name: Multiple Events
+on: 
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+jobs:
+    job1:
+        name: test events
+        runs-on: ubuntu-latest
+        steps:
+            - name: trigger events
+              run: echo "triggered by ${{ github.event_name }}"
