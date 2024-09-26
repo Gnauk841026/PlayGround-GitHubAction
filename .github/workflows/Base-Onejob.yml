@@ -23,12 +23,3 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-
-  build_on_windows:
-    name: it is testing for job rename
-    runs-on: windows-latest
-    steps:
-      - name: Run on windows power shell
-        run: |
-          echo "hello github Action for windows"
-          Get-Date
