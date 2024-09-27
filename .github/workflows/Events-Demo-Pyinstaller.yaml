@@ -1,0 +1,18 @@
+#.github/workflows/Events-Demo-Pyinstaller.yaml
+name: Events-Demo-Pyinstaller
+on: workflow_dispatch
+jobs:
+    job1:
+        name: build
+        runs-on: windows-latest
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v4
+            with:
+                path: 'python-sha256'
+          - name: what path
+            run: pwd
+          - name: install pyinstaller
+            run: pip install pyinstaller
+          - name: Run pyinstaller
+            run: pyinstaller -F ./sha256.py
