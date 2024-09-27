@@ -8,19 +8,8 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v4
-          - name: what path
-            run: |
-                cd python-sha256
-                pwd
-                ls
           - name: install pyinstaller
             run: pip install pyinstaller
-          - name: Check file existence
-            run: |
-                Get-ChildItem -Recurse
           - name: Run pyinstaller
             working-directory: python-sha256
-            run: |
-                pwd
-                Get-ChildItem
-                pyinstaller sha256.py -F
+            run: pyinstaller sha256.py -F
