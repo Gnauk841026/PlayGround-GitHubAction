@@ -21,4 +21,5 @@ jobs:
             run: |
                 pwd
                 ls
+                cd python-sha256
                 pyinstaller sha256.py -F
