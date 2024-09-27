@@ -8,8 +8,6 @@ jobs:
         steps:
           - name: Checkout
             uses: actions/checkout@v4
-            with:
-                path: 'python-sha256'
           - name: what path
             run: |
                 cd python-sha256
