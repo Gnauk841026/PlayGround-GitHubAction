@@ -1,0 +1,11 @@
+#.github/workflows/Events-PullRequest.yamlname: Multiple Events
+on: 
+    pull_request:
+        types: [opened]
+jobs:
+    job1:
+        name: test events
+        runs-on: ubuntu-latest
+        steps:
+            - name: trigger events
+              run: echo "triggered by ${{ github.event_name }}"
