@@ -1,9 +1,8 @@
-
 #.github/workflows/Events-Schedule.yaml
 name: Events-Schedule
 on: 
     schedule:
-        - cron: '*/1 * * * *'
+        - cron: '*/5 * * * *'
 jobs:
     job1:
         name: test events
