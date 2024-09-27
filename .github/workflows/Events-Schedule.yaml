@@ -1,0 +1,13 @@
+
+#.github/workflows/Events-Schedule.yaml
+name: Events-Schedule
+on: 
+    schedule:
+        - cron: '*/1 * * * *'
+jobs:
+    job1:
+        name: test events
+        runs-on: ubuntu-latest
+        steps:
+            - name: trigger events
+              run: echo "triggered by ${{ github.event_name }}"
