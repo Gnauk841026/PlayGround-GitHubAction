@@ -11,8 +11,10 @@ jobs:
             with:
                 path: 'python-sha256'
           - name: what path
-            run: pwd
+            run: |
+                pwd
+                ls
           - name: install pyinstaller
             run: pip install pyinstaller
           - name: Run pyinstaller
-            run: pyinstaller -F ./sha256.py
+            run: pyinstaller sha256.py -F
