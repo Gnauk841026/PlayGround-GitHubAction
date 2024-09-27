@@ -17,9 +17,12 @@ jobs:
                 ls
           - name: install pyinstaller
             run: pip install pyinstaller
+          - name: Check file existence
+            run: |
+                Get-ChildItem -Recurse
           - name: Run pyinstaller
+            working-directory: python-sha256
             run: |
                 pwd
-                ls
-                cd python-sha256
+                Get-ChildItem
                 pyinstaller sha256.py -F
